@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Dependencies: org.jboss.teiid.admin,org.jboss.teiid.client,org.jboss.t
- eiid,org.odata4j.core,org.jboss.teiid.translator.odata
-Built-By: mockbuild
-Build-Jdk: 1.6.0_24
-Created-By: Apache Maven
-Archiver-Version: Plexus Archiver
-
