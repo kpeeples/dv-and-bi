@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:relational="http://www.metamatrix.com/metamodels/Relational" xmlns:transformation="http://www.metamatrix.com/metamodels/Transformation">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:e0e1afc0-9fca-4f23-be64-6cc0bfc81271" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="VIRTUAL" ProducerName="Teiid Designer" ProducerVersion="8.2.0.Final-v20130817-0508-B2400">
+    <modelImports xmi:uuid="mmuuid:f5fdcb56-7886-46ce-b13d-cf2d457c9c83" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+    <modelImports xmi:uuid="mmuuid:993db14b-3523-40c4-b8a0-c2407e75504a" name="expenseReportsSource" modelLocation="expenseReportsSource.xmi" uuid="mmuuid:a781f77e-3799-484b-94f7-799f9e9f30ea" modelType="PHYSICAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
+  </mmcore:ModelAnnotation>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:309ce05c-b3a5-455a-967f-9b0cce027fb4"/>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:fe4bff6f-ac1e-447a-8207-adc0d7fe1434"/>
+  <transformation:TransformationContainer xmi:uuid="mmuuid:5b806a71-fef1-4c32-9e50-5586f4d628c5">
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:1e618450-6790-43bd-857c-79a445ad707a" outputs="mmuuid/0a1fdfe8-3b49-493d-8623-533582384ed0" target="mmuuid/0a1fdfe8-3b49-493d-8623-533582384ed0">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:ef1f40b6-9214-4403-81af-12baacee28cd">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:c50d8679-5f5a-416c-9a96-08aac235be2c" selectSql="SELECT &#xa;&#x9;A.id, A.office, A.department, A.author, A.&quot;date&quot;, A.amount&#xa;FROM&#xa;&#x9;(EXEC expenseReportsSource.getTextFiles('expenseReports.csv')) AS f, TEXTTABLE(file COLUMNS id string, office string, department string, author string, &quot;date&quot; string, amount string DELIMITER ';' HEADER) AS A"/>
+        <aliases xmi:uuid="mmuuid:58ed4ea8-5139-463e-a21a-15f1a6997b48" alias="getTextFiles">
+          <aliasedObject href="expenseReportsSource.xmi#mmuuid/615629da-4317-4005-ba25-d97bb114363f"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:7ee00e1b-8c9e-4987-bf94-c491cdd97a23" outputs="mmuuid/dac91736-ba07-41ab-8088-5738b322eeef"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:5854712e-ae55-4da5-b137-c1927db64d88" outputs="mmuuid/c934e6d7-ac6b-44e8-8cde-798381589abc"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:54f5ce1e-5165-457c-9d74-d0b6da1f4451" outputs="mmuuid/05b66fff-8143-4ea5-bfb8-1557eeb0c53d"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:b434a537-4eab-412b-a8b0-f6c6b29cfee4" outputs="mmuuid/41b37639-3212-42bd-ae86-a14efd7ceb63"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:88548d60-659c-45d9-853e-93538000b25a" outputs="mmuuid/6279bafd-7c66-426c-86d4-3a873dc1b55a"/>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:f3e45ce6-2d1a-40c2-90d1-59060266abb9" outputs="mmuuid/24bf5d89-d21e-4ffd-91e3-9650edb96447"/>
+      <inputs href="expenseReportsSource.xmi#mmuuid/615629da-4317-4005-ba25-d97bb114363f"/>
+    </transformationMappings>
+  </transformation:TransformationContainer>
+  <relational:BaseTable xmi:uuid="mmuuid:0a1fdfe8-3b49-493d-8623-533582384ed0" name="expenseReportsViewTable" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:dac91736-ba07-41ab-8088-5738b322eeef" name="id" nameInSource="id" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:c934e6d7-ac6b-44e8-8cde-798381589abc" name="office" nameInSource="office" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:05b66fff-8143-4ea5-bfb8-1557eeb0c53d" name="department" nameInSource="department" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:41b37639-3212-42bd-ae86-a14efd7ceb63" name="author" nameInSource="author" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:6279bafd-7c66-426c-86d4-3a873dc1b55a" name="date" nameInSource="&quot;date&quot;" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+    <columns xmi:uuid="mmuuid:24bf5d89-d21e-4ffd-91e3-9650edb96447" name="amount" nameInSource="amount" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+  </relational:BaseTable>
+</xmi:XMI>

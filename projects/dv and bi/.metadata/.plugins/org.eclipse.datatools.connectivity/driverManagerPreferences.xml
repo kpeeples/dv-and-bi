@@ -1,0 +1,8 @@
+#DriverManager.Preferences
+#Thu Aug 29 14:53:46 EDT 2013
+org.eclipse.datatools.connectivity.db.derby102.genericDriverTemplate=true
+org.eclipse.datatools.connectivity.db.derby101.genericDriverTemplate=true
+org.teiid.7.7.driver.serverDriverTemplate=true
+org.teiid.8.4.driver.serverDriverTemplate=true
+org.teiid.8.3.driver.serverDriverTemplate=true
+org.eclipse.datatools.connectivity.db.derby.genericDriverTemplate=true

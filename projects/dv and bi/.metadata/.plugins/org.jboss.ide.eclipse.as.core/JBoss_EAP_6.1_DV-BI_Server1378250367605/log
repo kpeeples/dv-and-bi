@@ -1,0 +1,22 @@
+!SESSION 2013-09-03 19:05:55.960 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product com.jboss.jbds.product.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.jboss.jbds.product.product
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2013-09-03 19:19:50.197
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2013-09-03 19:20:15.791
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2013-09-03 23:48:51.015
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2013-09-03 23:51:26.964
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2013-09-03 23:51:40.647
+!MESSAGE Server Startup Succeeded

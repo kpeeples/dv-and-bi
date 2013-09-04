@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:a57d47b8-821f-44bc-9333-999ae0def9d6" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="PHYSICAL" ProducerName="Teiid Designer" ProducerVersion="8.2.0.Final-v20130817-0508-B2400"/>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:7ed7324e-8d16-475b-8182-ce3ed40a326e">
+    <annotations xmi:uuid="mmuuid:ba58f0c6-e162-486b-b731-1812c3511ca0" annotatedObject="mmuuid/a57d47b8-821f-44bc-9333-999ae0def9d6">
+      <tags xmi:uuid="mmuuid:ab6e6b29-f995-41eb-bd42-d1bb1b75c8f5" key="connection:FlatFileHomeUrl" value="/home/kpeeples/mystuff/demos/DV-BI/DV-data/teiid-dashboard-1.0.0-SNAPSHOT-jboss-as7.0/WEB-INF/etc/appdata/initialData"/>
+      <tags xmi:uuid="mmuuid:88ac947b-75a6-41ff-9d9a-afbdca0c6720" key="connectionProfile:connectionProfileName" value="ExpensesDataSource"/>
+      <tags xmi:uuid="mmuuid:6bf6e1bd-6715-4e56-80f6-8c5e94b95c0a" key="connection:FlatFileDelimeter" value="COMMA"/>
+      <tags xmi:uuid="mmuuid:bb3b4b45-0c40-442a-86f2-a7e29facba09" key="connectionProfile:connectionProfileProviderId" value="org.eclipse.datatools.connectivity.oda.flatfile"/>
+      <tags xmi:uuid="mmuuid:087fd7c3-9886-42cd-b94e-efec3059a53f" key="translator:name" value="file"/>
+      <tags xmi:uuid="mmuuid:ebe38dac-9da9-4da5-ab32-cbb30f5b3d25" key="connection:FlatFileSecondLineDataType" value="NO"/>
+      <tags xmi:uuid="mmuuid:e718dbdf-4ed7-47cb-b9a1-b1b23fd6ea20" key="connectionProfile:connectionProfileInstanceID" value="354de391-1136-11e3-b70e-aba4f402fe1a"/>
+      <tags xmi:uuid="mmuuid:7207cae6-ceec-455f-a2e3-b0f5f9c08ee6" key="connection:FlatFileCharSet" value="UTF-8"/>
+      <tags xmi:uuid="mmuuid:76e0b584-7b07-4e48-9e9b-3bab9b357fcb" key="connection:FlatFileFirstLineColumnName" value="YES"/>
+      <tags xmi:uuid="mmuuid:1751a4e2-7215-4957-aa92-3dec74d8dc3d" key="connectionProfile:connectionProfileDescription" value=""/>
+      <tags xmi:uuid="mmuuid:60a3cad3-bae6-43a7-adde-063f7f90205a" key="connectionProfile:connectionProfileCategory" value="org.eclipse.datatools.connectivity.oda.flatfile"/>
+    </annotations>
+  </mmcore:AnnotationContainer>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:301fa959-e403-4966-bf45-db0ac97108ce"/>
+</xmi:XMI>

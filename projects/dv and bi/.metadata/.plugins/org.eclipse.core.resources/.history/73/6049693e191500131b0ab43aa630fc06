@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:relational="http://www.metamatrix.com/metamodels/Relational">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:a781f77e-3799-484b-94f7-799f9e9f30ea" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="PHYSICAL" ProducerName="Teiid Designer" ProducerVersion="8.2.0.Final-v20130817-0508-B2400">
+    <modelImports xmi:uuid="mmuuid:d5838bd6-8ae6-4f22-97a4-cb335ebdb3a0" name="SimpleDatatypes-instance" modelLocation="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+    <modelImports xmi:uuid="mmuuid:cb2f5c65-2972-4ce7-b877-4754895277d9" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+  </mmcore:ModelAnnotation>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:223608a8-0e81-42a0-ab25-6cdc0ee6d744">
+    <annotations xmi:uuid="mmuuid:f3aefe2b-9d4d-4ed7-98f5-9ce0d4b52592" annotatedObject="mmuuid/a781f77e-3799-484b-94f7-799f9e9f30ea">
+      <tags xmi:uuid="mmuuid:050d9346-b7b4-4159-94ea-7d127ef365be" key="connection:FlatFileHomeUrl" value="/home/kpeeples/mystuff/demos/DV-BI/DV-data"/>
+      <tags xmi:uuid="mmuuid:293fc734-5b32-4f84-8750-90d2a7b3a778" key="connectionProfile:connectionProfileName" value="FlatFileDataSource"/>
+      <tags xmi:uuid="mmuuid:c6398f92-c60f-4898-8303-9a420223a58d" key="connection:FlatFileDelimeter" value="COMMA"/>
+      <tags xmi:uuid="mmuuid:39ddbf0d-57c3-4567-a228-6787f1498866" key="connectionProfile:connectionProfileProviderId" value="org.eclipse.datatools.connectivity.oda.flatfile"/>
+      <tags xmi:uuid="mmuuid:b1034e06-65d7-4696-a218-e68d978d9863" key="translator:name" value="file"/>
+      <tags xmi:uuid="mmuuid:38c3aa01-2963-469d-b05c-731c5ac0785d" key="connection:FlatFileSecondLineDataType" value="NO"/>
+      <tags xmi:uuid="mmuuid:136ac9b9-5f1b-475a-9953-02df7342e966" key="connectionProfile:connectionProfileInstanceID" value="e748d260-1516-11e3-87e6-f6c02f297c32"/>
+      <tags xmi:uuid="mmuuid:dbacd629-052a-4183-8486-00a99a044c60" key="connection:FlatFileCharSet" value="UTF-8"/>
+      <tags xmi:uuid="mmuuid:a9b93e6d-a204-417c-8775-ae8bb5f14b7c" key="connection:FlatFileFirstLineColumnName" value="YES"/>
+      <tags xmi:uuid="mmuuid:43aa4ff9-4c92-497f-8747-1fc90161435e" key="connectionProfile:connectionProfileDescription" value=""/>
+      <tags xmi:uuid="mmuuid:67a03fd4-3d62-401c-b5e1-3d03af87074b" key="connectionProfile:connectionProfileCategory" value="org.eclipse.datatools.connectivity.oda.flatfile"/>
+    </annotations>
+  </mmcore:AnnotationContainer>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:a61f1217-dbee-44c0-a3d5-0cb603d08330">
+    <diagram xmi:uuid="mmuuid:c12e83e3-0bec-4e21-80cf-4ffd27ecb455" type="packageDiagramType" target="mmuuid/a781f77e-3799-484b-94f7-799f9e9f30ea"/>
+  </diagram:DiagramContainer>
+  <relational:Procedure xmi:uuid="mmuuid:615629da-4317-4005-ba25-d97bb114363f" name="getTextFiles">
+    <parameters xmi:uuid="mmuuid:c99aab85-4012-4d25-9f96-d9771cc5b333" name="pathAndExt" length="4000">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <result xmi:uuid="mmuuid:1dc68524-f248-4d83-a51e-62a439ca9e9d" name="Result">
+      <columns xmi:uuid="mmuuid:52be1af0-137f-44d8-82b4-6fb4a63d5504" name="file">
+        <type href="http://www.metamatrix.com/metamodels/SimpleDatatypes-instance#clob"/>
+      </columns>
+      <columns xmi:uuid="mmuuid:af1c2ed5-06ee-4ae8-9f8d-72e3482fde07" name="filePath" length="4000">
+        <type href="http://www.w3.org/2001/XMLSchema#string"/>
+      </columns>
+    </result>
+  </relational:Procedure>
+</xmi:XMI>

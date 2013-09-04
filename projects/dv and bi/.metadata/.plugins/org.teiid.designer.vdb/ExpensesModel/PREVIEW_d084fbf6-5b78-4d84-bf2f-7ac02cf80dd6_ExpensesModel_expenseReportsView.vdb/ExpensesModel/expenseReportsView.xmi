@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagram="http://www.metamatrix.com/metamodels/Diagram" xmlns:mmcore="http://www.metamatrix.com/metamodels/Core" xmlns:relational="http://www.metamatrix.com/metamodels/Relational" xmlns:transformation="http://www.metamatrix.com/metamodels/Transformation">
+  <mmcore:ModelAnnotation xmi:uuid="mmuuid:60378e37-1ea7-42e9-a129-6ef459d0a836" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational" modelType="VIRTUAL" ProducerName="Teiid Designer" ProducerVersion="8.2.0.Final-v20130817-0508-B2400">
+    <modelImports xmi:uuid="mmuuid:18ca81a3-d41a-4675-b885-94c39423af70" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+    <modelImports xmi:uuid="mmuuid:fad13b0c-be4f-498a-88d5-3a990dd39f88" name="expenseReportsSource" modelLocation="expenseReportsSource.xmi" uuid="mmuuid:a57d47b8-821f-44bc-9333-999ae0def9d6" modelType="PHYSICAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
+  </mmcore:ModelAnnotation>
+  <mmcore:AnnotationContainer xmi:uuid="mmuuid:a6e6d7e2-a348-450e-8273-b9a0663a7e31"/>
+  <diagram:DiagramContainer xmi:uuid="mmuuid:07cc3e5c-31f8-41ab-8bc8-83359a01e558"/>
+  <transformation:TransformationContainer xmi:uuid="mmuuid:1e539d77-f097-4d5d-9382-57e3948ca704">
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:df59a814-281a-465c-a50e-d2f02077fe4d" outputs="mmuuid/2f1cb5be-0495-49f6-a94a-77cfede5fd4a" target="mmuuid/2f1cb5be-0495-49f6-a94a-77cfede5fd4a">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:5d07327b-6db4-45eb-8fb4-8a42d437ae45">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:bbac245c-7370-44ac-8d15-579df6e9110c" selectSql="SELECT &#xa;&#x9;A.&quot;id;office;department;author;date;amount&quot;&#xa;FROM&#xa;&#x9;(EXEC expenseReportsSource.getTextFiles('expenseReports.csv')) AS f, TEXTTABLE(file COLUMNS &quot;id;office;department;author;date;amount&quot; string  HEADER) AS A"/>
+        <aliases xmi:uuid="mmuuid:2c15757c-2ce1-47ce-82ec-7b7886974e61" alias="getTextFiles">
+          <aliasedObject href="expenseReportsSource.xmi#mmuuid/fc3fda2c-9880-49cc-8738-a2c967774098"/>
+        </aliases>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:9a224187-a476-45ea-b538-7e0cb3db1b72" outputs="mmuuid/8f5b359d-2789-4053-88ca-6abcf332554b"/>
+      <inputs href="expenseReportsSource.xmi#mmuuid/fc3fda2c-9880-49cc-8738-a2c967774098"/>
+    </transformationMappings>
+  </transformation:TransformationContainer>
+  <relational:BaseTable xmi:uuid="mmuuid:2f1cb5be-0495-49f6-a94a-77cfede5fd4a" name="expenseReportsViewTable" supportsUpdate="false">
+    <columns xmi:uuid="mmuuid:8f5b359d-2789-4053-88ca-6abcf332554b" name="id;office;department;author;date;amount" nameInSource="&quot;id;office;department;author;date;amount&quot;" length="4000" defaultValue="" updateable="false">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </columns>
+  </relational:BaseTable>
+</xmi:XMI>
